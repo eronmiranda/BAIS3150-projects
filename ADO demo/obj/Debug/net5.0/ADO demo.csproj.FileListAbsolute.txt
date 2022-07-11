@@ -1,0 +1,48 @@
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.exe
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.deps.json
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.runtimeconfig.json
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.runtimeconfig.dev.json
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ref\ADO demo.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\ADO demo.pdb
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.AssemblyInfoInputs.cache
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.AssemblyInfo.cs
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.csproj.CoreCompileInputs.cache
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.dll
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ref\ADO demo.dll
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.pdb
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.genruntimeconfig.cache
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Azure.Identity.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Drawing.Common.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Security.Permissions.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\System.Windows.Extensions.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Eron\source\repos\ADO demo\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.csproj.AssemblyReference.cache
+C:\Users\Eron\source\repos\ADO demo\obj\Debug\net5.0\ADO demo.csproj.CopyComplete

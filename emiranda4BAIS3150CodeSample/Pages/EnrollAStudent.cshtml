@@ -1,0 +1,52 @@
+﻿@page
+@model emiranda4BAIS3150CodeSample.Pages.EnrollAStudentModel
+@{
+    ViewData["Title"] = "Enroll a Student - emiranda4";
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<h1 class="display-4">Enroll a Student</h1>
+<hr class="my-4">
+<div>
+    <h4 class="alert-success">@Model.FormMessage</h4>
+    <span class="alert-danger">@Model.ErrorMessage</span>
+    <form method="post">
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="StudentID" class="form-label">Student ID</label>
+                <input type="text" asp-for="StudentID" class="form-control" placeholder="jdoe1"/>
+                <span asp-validation-for="StudentID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="FirstName" class="form-label">First Name</label>
+                <input type="text" asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label asp-for="LastName" class="form-label">Last Name</label>
+                <input type="text" asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input type="email" asp-for="Email" placeholder="ex. johndoe@nait.ca" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <label asp-for="ProgramCode" class="form-label">Program Code</label>
+                <input type="text" asp-for="ProgramCode" placeholder="ex. BAIST" class="form-control" />
+                <span asp-validation-for="ProgramCode" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <button asp-page-handler="Submit" name="Submit" class="btn btn-success" onclick="return confirm('Are you sure you want to enroll this student?')">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

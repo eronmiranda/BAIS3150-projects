@@ -1,0 +1,26 @@
+﻿@page
+@model UIAssignmentRazorPages.Pages.emiranda4SignOnModel
+@{
+    ViewData["Title"] = "Sign On";
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<h1>Sign On</h1>
+<h4 class="alert-success">@Model.FormResult</h4>
+<div>
+    <form action="" method="post">
+        <label asp-for="@Model.UserId" class="text-right">User ID:</label>
+        <input type="text" asp-for="@Model.UserId" placeholder="Enter User ID" />
+        <span asp-validation-for="@Model.UserId" class="text-danger"></span>
+        <br />
+
+        <label asp-for="@Model.Password">Password:</label>
+        <input type="password" asp-for="@Model.Password" placeholder="Enter Password" />
+        <span asp-validation-for="@Model.Password" class="text-danger"></span>
+        <br />
+
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+</div>

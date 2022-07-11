@@ -1,0 +1,83 @@
+﻿@page
+@model emiranda4BAIS3150CodeSample.Pages.FindAProgramModel
+@{
+    ViewData["Title"] = "Find a Program - emiranda4";
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<h1 class="display-4">Find a Program</h1>
+<hr class="my-4">
+<div>
+    <form method="post">
+        <div class="form-group row align-items-end">
+            <div class="col-2">
+                <label asp-for="ProgramCode" class="form-label">Program Code</label>
+                <input type="text" asp-for="ProgramCode" placeholder="ex. BAIST" class="form-control" />
+            </div>
+            <div class="col-auto">
+                <span asp-validation-for="ProgramCode" class="alert-danger"></span>
+                <br />
+                <span class="alert-danger">@Model.ErrorMessage</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <button asp-page-handler="Search" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+@if (Model.ExistingProgram != null)
+{
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <caption>Program Information</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Program Code</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.ExistingProgram.ProgramCode</td>
+                    <td>@Model.ExistingProgram.Description</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model.ExistingProgram.Students.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-sm table-hover table-bordered">
+                <caption>Student Enrolled in @Model.ExistingProgram.ProgramCode</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Student ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var student in Model.ExistingProgram.Students)
+                    {
+                        <tr>
+                            <td>@student.StudentID</td>
+                            <td>@student.FirstName</td>
+                            <td>@student.LastName</td>
+                            <td>@student.Email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <span class="alert-warning">No students are enrolled in this program</span>
+    }
+}
+

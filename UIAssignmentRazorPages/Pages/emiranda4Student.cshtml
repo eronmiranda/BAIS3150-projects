@@ -1,0 +1,188 @@
+﻿@page
+@model UIAssignmentRazorPages.Pages.emiranda4StudentModel
+@{
+    ViewData["Title"] = "New Student";
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<script type="text/javascript">
+    function ValidateForm(form) {
+        var formIsValid = false;
+
+        var firstNameValue = form.FirstName.value;
+
+        var lastNameValue = form.LastName.value;
+
+        var emailValue = form.Email.value;
+        var emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+
+        var programValue = form.Program.value;
+
+        var userIdValue = form.UserID.value;
+        var userIdPattern = /[a-zA-Z]{4}[0-9]{4}/;
+
+        var passwordValue = form.Password.value;
+
+        var confirmPasswordValue = form.ConfirmPassword.value;
+
+        var firstNameIsValid = false;
+        var lastNameIsValid = false;
+        var emailIsValid = false;
+        var programIsValid = false;
+        var userIDIsValid = false;
+        var passwordIsValid = false;
+        var confirmPasswordIsValid = false;
+
+
+        if (firstNameValue.length <= 0) {
+            firstNameIsValid = false;
+            document.getElementById("FirstNameError").innerText = "First Name is required";
+            document.getElementById("FirstName").focus();
+        }
+        else {
+            firstNameIsValid = true;
+            document.getElementById("FirstNameError").innerText = "";
+        }
+
+        if (lastNameValue.length <= 0)
+        {
+            lastNameIsValid = false;
+            document.getElementById("LastNameError").innerText = "Last Name is required";
+            document.getElementById("LastName").focus();
+        }
+        else {
+            lastNameIsValid = true;
+            document.getElementById("LastNameError").innerText = "";
+        }
+
+        if (emailValue.length <= 0) {
+            emailIsValid = false;
+            document.getElementById("EmailError").innerText = "Email is required";
+            document.getElementById("Email").focus();
+        }
+        else if (!emailPattern.test(emailValue)) {
+            emailIsValid = false;
+            document.getElementById("EmailError").innerText = "Please enter a valid email address (e.g. johndoe@email.com)";
+            document.getElementById("Email").focus();
+        }
+        else {
+            emailIsValid = true;
+            document.getElementById("EmailError").innerText = "";
+        }
+
+        if (programValue == "") {
+            programIsValid = false;
+            document.getElementById("ProgramError").innerText = "Program is required";
+        }
+        else {
+            programIsValid = true;
+            document.getElementById("ProgramError").innerText = "";
+        }
+
+        if (userIdValue.length <= 0) {
+            userIDIsValid = false;
+            document.getElementById("UserIDError").innerText = "User ID is required";
+            document.getElementById("UserID").focus();
+        }
+        else if (!userIdPattern.test(userIdValue)) {
+            userIDIsValid = false;
+            document.getElementById("UserIDError").innerText = "User ID Value must be 4 letters followed by 4 digits (e.g. BAIS9999)";
+            document.getElementById("UserID").focus();
+        }
+        else {
+            userIDIsValid = true;
+            document.getElementById("UserIDError").innerText = "";
+        }
+
+        if (passwordValue.length < 6) {
+            passwordIsValid = false;
+            document.getElementById("PasswordError").innerText = "Password is required and is at least 6 characters long";
+            document.getElementById("Password").focus();
+        }
+        else {
+            passwordIsValid = true;
+            document.getElementById("PasswordError").innerText = "";
+        }
+
+        if (confirmPasswordValue.length <= 0) {
+            confirmPasswordIsValid = false;
+            document.getElementById("ConfirmPasswordError").innerText = "Confirm Password is required";
+            document.getElementById("ConfirmPassword").focus();
+        }
+        else if (confirmPasswordValue !== passwordValue) {
+            confirmPasswordIsValid = false;
+            document.getElementById("ConfirmPasswordError").innerText = "Confirm Password should be the same as the entered Password value";
+            document.getElementById("ConfirmPassword").focus();
+        }
+        else {
+            confirmPasswordIsValid = true;
+            document.getElementById("ConfirmPasswordError").innerText = "";
+        }
+
+        if (firstNameIsValid && lastNameIsValid && emailIsValid && programIsValid && userIDIsValid && passwordIsValid && confirmPasswordIsValid) {
+            formIsValid = true;
+            alert('A new student account for ' + firstNameValue + ' ' + lastNameValue + ' has been created');
+        }
+
+        return formIsValid;
+    }
+</script>
+
+
+<h1>New Student</h1>
+<div>
+    <form name="NewStudentForm" action="" method="post" onsubmit="return ValidateForm(window.document.NewStudentForm);">
+        <span id="MessageAlert" class="alert-success"></span>
+        <br />
+
+        <label asp-for="FirstName">First Name:</label>
+        <input type="text" asp-for="FirstName" placeholder="Enter First Name" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+        <span id="FirstNameError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="LastName">Last Name:</label>
+        <input type="text" asp-for="LastName" placeholder="Enter Last Name" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+        <span id="LastNameError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="Email">Email:</label>
+        <input type="text" asp-for="Email" placeholder="Enter Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <span id="EmailError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="Program">Program:</label>
+        <select asp-for="Program">
+            <option value="">Please select a program</option>
+            <option value="BAIST">Bachelor of Applied Information Systems Technology</option>
+            <option value="BBA">Bachelor of Business Administration</option>
+            <option value="PHOT">Photographic Technology</option>
+        </select>
+        <span asp-validation-for="Program" class="text-danger"></span>
+        <span id="ProgramError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="UserID">User ID:</label>
+        <input type="text" asp-for="UserID" placeholder="Enter User ID" />
+        <span asp-validation-for="UserID" class="text-danger"></span>
+        <span id="UserIDError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="Password">Password:</label>
+        <input type="password" asp-for="Password" placeholder="Enter Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <span id="PasswordError" class="alert-danger"></span>
+        <br />
+
+        <label asp-for="ConfirmPassword">Password:</label>
+        <input type="password" asp-for="ConfirmPassword" placeholder="Enter Confirm Password" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        <span id="ConfirmPasswordError" class="alert-danger"></span>
+        <br />
+
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+</div>

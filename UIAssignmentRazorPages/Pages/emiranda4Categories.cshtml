@@ -1,0 +1,24 @@
+﻿@page
+@model UIAssignmentRazorPages.Pages.emiranda4CategoriesModel
+@{
+}
+<table border="1">
+    <thead>
+        <tr>
+            @foreach (string column in Model.CategoryColumn)
+            {
+                <th>@column</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category existingCategory in Model.CategoryList)
+        {
+        <tr>
+            <td>@existingCategory.CategoryName</td>
+            <td>@existingCategory.Description</td>
+            <td><img src="data:image/bmp;base64,@System.Convert.ToBase64String(existingCategory.Picture[78..])" width="100" height="100" /></td>
+        </tr>
+        }
+    </tbody>
+</table>

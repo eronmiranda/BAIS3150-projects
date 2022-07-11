@@ -1,0 +1,62 @@
+﻿@page
+@model emiranda4BAIS3150CodeSample.Pages.ModifyAStudentModel
+@{
+    ViewData["Title"] = "Modify a Student - emiranda4";
+}
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<h1 class="display-4">Modify a Student</h1>
+<hr class="my-4">
+<div>
+    <h4 class="alert-success">@Model.FormMessage</h4>
+    <form method="post">
+        <div class="form-group row align-items-end">
+            <div class="col-2">
+                <label asp-for="StudentID" class="form-label">Student ID</label>
+                <input type="text" asp-for="StudentID" placeholder="ex. johndoe1" class="form-control">
+            </div>
+            <div class="col-auto">
+                <span asp-validation-for="StudentID" class="alert-danger"></span>
+                <br />
+                <span class="alert-danger">@Model.ErrorMessage</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <button asp-page-handler="Search" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+@if (Model.ExistingStudent != null && !Model.Disable)
+{
+    <div>
+        <form method="post">
+            <div class="col-2">
+                <label asp-for="@Model.StudentID" class="form-label">Student ID</label>
+                <input type="text" asp-for="@Model.StudentID" readonly value="@Model.ExistingStudent.StudentID" class="form-control"/>
+            </div>
+            <label asp-for="@Model.StudentID" class="text-right">Student ID: </label>
+            <input type="text" asp-for="@Model.StudentID" readonly value="@Model.ExistingStudent.StudentID" />
+            <br />
+            <label asp-for="@Model.FirstName" class="text-right">First Name: </label>
+            <input type="text" asp-for="@Model.FirstName" value="@Model.ExistingStudent.FirstName" />
+            <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+            <br />
+            <label asp-for="@Model.LastName" class="text-right">Last Name: </label>
+            <input type="text" asp-for="@Model.LastName" value="@Model.ExistingStudent.LastName" />
+            <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+            <br />
+            <label asp-for="@Model.Email" class="text-right">Email: </label>
+            <input type="text" asp-for="@Model.Email" placeholder="ex. johndoe@mail.com" value="@Model.ExistingStudent.Email" />
+            <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            <br />
+            <label asp-for="@Model.ProgramCode" class="text-right">Program Code: </label>
+            <input type="text" asp-for="@Model.ProgramCode" placeholder="ex. BAIST" value="@Model.ExistingStudent.ProgramCode" />
+            <span asp-validation-for="@Model.ProgramCode" class="text-danger"></span>
+            <br />
+            <button asp-page-handler="Submit" name="Submit" class="btn btn-success" disabled="@Model.Disable">Submit</button>
+        </form>
+    </div>
+}
