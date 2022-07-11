@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <hr />
+    <br />
+    @{ 
+        DateTime currentDate = DateTime.Now;
+
+        if(currentDate.DayOfWeek == DayOfWeek.Monday)
+        {
+            <p>Happy Monday! Time to learn! <br /></p>
+        }
+        else
+        {
+            <p>It's not Monday. It's time to sleep.</p>
+        }
+    }
+    <hr />
+    <br />
+    <br />
+    <form action="/" method="post">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                    Login
+                </th>
+            </tr>
+            <tr class="text-right">
+                <td>Name</td>
+                <td>
+                    <input type="text" name="UserName" />
+                </td>
+            </tr>
+            <tr class="text-right">
+                <td>Password</td>
+                <td>
+                    <input type="text" name="Password" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="Submit" name="Submit" value="Submit"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+

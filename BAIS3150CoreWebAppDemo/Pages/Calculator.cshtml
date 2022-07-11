@@ -1,0 +1,41 @@
+﻿@page
+@model BAIS3150CoreWebAppDemo.Pages.CalculatorModel
+@{
+    ViewData["Title"] = "Baist";
+}
+<img src="~/images/Calcy.png" alt="Calcy Logo" asp-append-version="true"/>
+
+<br />
+<br />
+<form action="/" method="post">
+    <table border="1">
+        <tr>
+            <th colspan="2">
+                Calculator
+            </th>
+        </tr>
+        <tr class="text-right">
+            <td>First Number</td>
+            <td>
+                <input type="number" name="UserName" asp-for="@Model.FirstNumber"/>
+            </td>
+        </tr>
+        <tr class="text-right">
+            <td>Second Number</td>
+            <td>
+                <input type="number" name="Password" value="" asp-for="@Model.SecondNumber"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td>
+                @Model.Result
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="Submit" name="Submit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+</form>
